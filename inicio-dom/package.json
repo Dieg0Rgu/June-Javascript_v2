@@ -1,0 +1,37 @@
+{
+  "name": "inicio-dom",
+  "keywords": [
+    "dom",
+    "javascript"
+  ],
+  "author": "Diego Rodriguez",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "tailwindcss": "^4.3.0",
+    "vite": "^8.0.12"
+  },
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "detect-libc": "^2.1.2",
+    "fdir": "^6.5.0",
+    "lightningcss": "^1.32.0",
+    "lightningcss-linux-x64-gnu": "^1.32.0",
+    "nanoid": "^3.3.12",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.4",
+    "postcss": "^8.5.15",
+    "rolldown": "^1.0.3",
+    "source-map-js": "^1.2.1",
+    "tinyglobby": "^0.2.17"
+  },
+  "license": "ISC"
+}
