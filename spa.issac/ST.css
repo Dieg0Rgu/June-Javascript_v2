@@ -1,0 +1,103 @@
+:root{
+    --jop : #050846;
+    --oro-claro : #173edb;
+    --rog: #221f1f;
+}
+body{
+    color: #f8f6f6;
+    background-color: #000000;
+}
+.home{
+    color: #f8f6f6;
+    text-decoration: dashed;
+    position: relative;
+    padding: 0.5rem;
+    box-sizing: 0 0px 0.625rem #000000;
+    margin-right: 1.25rem;
+    display: flex;
+    background-color: var(--rog);
+    border-radius: 0.625rem;
+    animation: hh 2s forwards;
+    transition: all 1.5s ease;
+}
+.home:hover{
+    background-color: var(--jop);
+}
+.about{
+    color: #f8f6f6;
+    text-decoration: dashed;
+    position: relative;
+    padding: 0.5rem;
+    box-sizing: 0 0px 0.625rem #000000;
+    margin-right: 1.25rem;
+    display: flex;
+    background-color: var(--rog);
+    border-radius: 0.625rem;
+    animation: hc 2s forwards;
+    transition: all 1.5s ease;
+}
+.about:hover{
+    background-color: var(--jop);
+}
+.lorem{
+    color: #f8f6f6;
+    text-decoration: dashed;
+    position: relative;
+    padding: 0.5rem;
+    box-sizing: 0 0px 0.625rem #000000;
+    margin-right: 1.25rem;
+    display: flex;
+    background-color: var(--rog);
+    border-radius: 0.625rem;
+    animation: ha 2s forwards;
+    transition: all 1.5s ease;
+}
+.lorem:hover{
+    background-color: var(--jop);
+    transition: all 1.5s ease;
+}
+nav{
+    box-shadow: 0 0.313rem 62.5rem #05144e;
+    height: 1.875rem;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 1.875rem;
+    margin: -0.75rem;
+    background: linear-gradient(
+        to right,
+        #040446 0%,
+        #010115 10%,
+        #080606 20% 80%,
+        #060606 90%,
+        #040446 100%
+    );
+    backdrop-filter: blur(0.625rem);
+}
+
+
+
+@keyframes  home{
+    from{
+        transform: translateX(-31.25rem) scale(0);
+    }
+    to{
+        transform: translateY(0.313rem) scale(1);
+    }
+}
+@keyframes about{
+    from{
+        transform: translateX(-31.25rem) scale(0);
+    }
+    to{
+        transform: translateY(0.563rem) scale(1);
+    }
+}
+@keyframes lorem{
+    from{
+        transform: translateX(-31.25rem) scale(0);
+    }
+    to{
+        transform: translateY(0.563rem) scale(1);
+    }
+}
