@@ -2,35 +2,52 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./src/styles/global.css" />
     <title>CRUD HTML, CSS y JavaScript</title>
   </head>
-  <body>
-    <div class="div-titulo">
-      <h1>CRUD Local JavaScript</h1>
+
+  <body class="bg-pink-100 min-h-screen">
+
+     <!-- TÍTULO -->
+    <div class="w-full py-6 flex justify-center">
+      <h1 class="font-light text-2xl">CRUD Local JavaScript</h1>
     </div>
 
-    <div class="contenedor">
-      <div class="dform">
-        <h2>Formulario</h2>
+    <!-- ▶ CONTENEDOR PRINCIPAL (formulario + listado lado a lado) -->
+    <div class="w-full flex justify-center gap-4 px-4">
 
-        <form action="#" id="formulario">
-          <input type="text" id="nombre" placeholder="Ingresa un nombre" />
-          <input type="text" id="puesto" placeholder="Ingresa el puesto" />
-          <button type="submit" id="btnSesión">Iniciar sesion</button>
+      <!-- ▶ FORMULARIO -->
+      <div class="w-4/12 h-auto py-6 bg-amber-400 flex flex-col
+                  items-center rounded-2xl shadow-lg shadow-neutral-400">
+        <h2 class="font-light text-2xl text-white mb-4">Formulario</h2>
+        <form action="#" id="formulario" class="flex flex-col gap-3 w-full px-6">
+          <input type="text" id="nombre" placeholder="Ingresa un nombre"
+            class="border border-amber-600 rounded-lg px-3 py-2
+                  bg-amber-50 outline-none focus:ring-2 focus:ring-amber-700" />
+          <input type="text" id="puesto" placeholder="Ingresa el puesto"
+            class="border border-amber-600 rounded-lg px-3 py-2
+                  bg-amber-50 outline-none focus:ring-2 focus:ring-amber-700" />
+          <button type="submit" id="btnAgregar"
+            class="border border-amber-700 bg-amber-500 hover:bg-amber-600
+                  text-white font-semibold rounded-lg px-4 py-2 cursor-pointer">
+            Agregar
+          </button>
         </form>
       </div>
-    </div>
 
-
-    <div class="listado">
-        <h2>Listado Empleados</h2>
-        <div class="empleados">
-            
+      <!-- ▶ LISTADO -->
+      <div class="w-6/12 min-h-64 bg-cyan-600 flex flex-col
+                items-center rounded-2xl shadow-lg shadow-neutral-400">
+        <h2 class="font-light text-2xl text-white mt-4 mb-2">Listado Empleados</h2>
+        <div id="empleados" class="w-full flex flex-col gap-2 p-4">
+          <!-- empleados se renderizan aquí con JS -->
         </div>
+      </div>
+
     </div>
+
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
