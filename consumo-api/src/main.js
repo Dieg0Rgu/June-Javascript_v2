@@ -2,6 +2,8 @@
 // console.log(2)
 // console.log(3)
 
+//    alert("My homebody just domed a nigga") 
+
 // setTimeout(() =>{
 //    alert("My homebody just domed a nigga") 
 // }, 10000);
@@ -21,12 +23,20 @@
 // }
 
 // Promesas
-const silvioBrito = new Promise((resolve, reject)=> {
-    let edad = Number(prompt("Ingrese su edad"))
+// const silvioBrito = new Promise((resolve, reject)=> {
+//     let edad = Number(prompt("Ingrese su edad"))
 
-    if (edad >= 18){
-        resolve("Puedes tomar birra")
-    }else{
-        reject("F")
-    }
-})
+//     if (edad >= 18){
+//         resolve("Puedes tomar birra")
+//     }else{
+//         reject("Siga viendo")
+//     }
+// })
+async function TraerDatos() {
+    const reply =  await fetch("https://api.escuelajs.co/api/v1/categories")
+    const data =  await reply.json()
+    return data
+}
+const btn = document.getElementById("btn")
+
+btn.addEventListener("click",TraerDatos)

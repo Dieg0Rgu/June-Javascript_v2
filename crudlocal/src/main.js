@@ -29,22 +29,44 @@ function validarFormulario(e){
     } else {
         objEmpleado.id = Date.now();
         objEmpleado.nombre = nombreInput.value;
-        objEmpleado.value = puestoInput.value;
+        objEmpleado.puesto = puestoInput.value;
 
         agregarEmpleado();
     }
 }
 
 function agregarEmpleado(){
-    listaEmpleados.push((...objEmpleado));
-    
+    listaEmpleados.push({...objEmpleado});
+
     mostrarEmpleados();
 }
 
 function mostrarEmpleados(){
-    const empleados = document.querySelector('.empleados')
+    const empleados = document.querySelector('#empleados')
+    empleados.innerHTML = '';
 
-    listaEmpleados.forEach(empleado => {
-        const (id, nombre, puesto) = empleado;
-    })
+    listaEmpleados.forEach(empleado =>{
+        const {id, nombre, puesto} = empleado;
+
+        const parrafo = document.createElement('p');
+        parrafo.textContent = `${id} - ${nombre} - ${puesto}`;
+        parrafo.dataset.id = id;
+
+        const editBtn = document.createElement('button');
+        // editarBoton.onclick = () => cargarEmpleado();
+        editBtn.textContent = 'Editar';
+        editBtn.classList.add('btn', 'btn-editar');
+        parrafo.append(editBtn);
+
+        const deleteBtn = document.createElement('button');
+        // eliminarBoton.onclick = () => eliminarEmpleado();
+        deleteBtn.textContent = 'Eliminar';
+        deleteBtn.classList.add('btn', 'btn-eliminar');
+        parrafo.append(deleteBtn);
+
+        const hr = document.createElement('hr')
+
+        empleados.appendChild(parrafo);
+        empleados.appendChild(hr);
+    });
 }
